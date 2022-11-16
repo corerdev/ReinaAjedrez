@@ -27,7 +27,7 @@ public class Reina {
 	private void setPosicion(Posicion posicion) {
 
 		if (posicion.getFila() >= 1 && posicion.getFila() <= 8) {
-			if (posicion.getColumna() >= 'a' && posicion.getColumna() <= 'H') {
+			if (posicion.getColumna() >= 'a' && posicion.getColumna() <= 'h') {
 				this.posicion = posicion;
 			} else {
 				throw new IllegalArgumentException("ERROR: Columna no válida.");
@@ -38,5 +38,24 @@ public class Reina {
 		}
 
 	}
+
+	public Reina() {
+
+		color = Color.BLANCO;
+		posicion = new Posicion(1, 'd');
+
+	}
+
+	public Reina(Color color) {
+		if (color.equals(Color.NEGRO)) {
+			color = Color.NEGRO;
+			posicion = new Posicion(8, 'b');
+		} else {
+			color = Color.BLANCO;
+			posicion = new Posicion(1, 'd');
+		}
+
+	}
+
 
 }
