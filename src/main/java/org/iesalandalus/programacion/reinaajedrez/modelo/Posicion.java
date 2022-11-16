@@ -10,6 +10,11 @@ public class Posicion {
 
 		setFila(numFila);
 		setColumna(charColumna);
+	}
+		
+	public Posicion(Posicion p) {	
+			fila = p.getFila();
+			columna = p.getColumna();			
 
 	}
 
