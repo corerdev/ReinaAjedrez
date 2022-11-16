@@ -15,8 +15,12 @@ public class Posicion {
 	}
 		
 	public Posicion(Posicion p) {	
+		if (p == null) {
+			throw new NullPointerException("ERROR: No es posible copiar una posición nula.");
+		} else {
 			fila = p.getFila();
-			columna = p.getColumna();			
+			columna = p.getColumna();		
+		}
 
 	}
 
@@ -26,7 +30,7 @@ public class Posicion {
 
 	private void setFila(int fila) {
 		if (fila < 1 || fila > 8) {
-			throw new IllegalArgumentException("El valor de la fila es incorrecto.");
+			throw new IllegalArgumentException("ERROR: Fila no válida.");
 
 		} else {
 			this.fila = fila;
@@ -39,7 +43,7 @@ public class Posicion {
 
 	private void setColumna(char columna) {
 		if (columna < 'a' || columna > 'h') {
-			throw new IllegalArgumentException("El valor de la columna es incorrecto.");
+			throw new IllegalArgumentException("ERROR: Columna no válida.");
 
 		} else {
 			this.columna = columna;
@@ -61,6 +65,11 @@ public class Posicion {
 			return false;
 		Posicion other = (Posicion) obj;
 		return columna == other.columna && fila == other.fila;
+	}
+
+	@Override
+	public String toString() {
+		return "fila=" + fila + ", columna=" + columna;
 	}
 	
 	
