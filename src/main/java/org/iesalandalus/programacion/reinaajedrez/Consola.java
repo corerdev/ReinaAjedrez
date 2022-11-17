@@ -30,12 +30,12 @@ public class Consola {
 		do {
 			
 			System.out.println("Por favor, elija una de las opciones del menú: ");
-			Entrada.entero(seleccion);
-		} while (seleccion <1 || seleccion > 4);
+			seleccion = Entrada.entero();
+		} while (seleccion <1 || seleccion > 4 );
 		
 		if (seleccion == 1) {
 			System.out.println("Ha elegido crear la reina por defecto. Esta será blanca, y empezará en 1d.");
-		} if (selección == 2) {
+		} if (seleccion == 2) {
 			System.out.println("Ha elegido crear una reina de color determinado.");
 			} if (seleccion == 3) {
 				System.out.println("Ha elegido mover a la reina.");
@@ -45,4 +45,33 @@ public class Consola {
 			
 	}
 	
+public static void elegirOpciom() {
+		
+		
+		int seleccioncolor;
+		
+		do {
+			
+			System.out.println("Por favor, elija una de las opciones: 1 para reina blanca, 2 para reina negra.");
+			seleccioncolor = Entrada.entero();
+		} while (seleccioncolor <1 || seleccioncolor > 2);
+		
+		if (seleccioncolor == 1) {
+			System.out.println("Ha elegido crear la reina blanca. Empieza en 1d.");
+		} if (seleccioncolor == 2) {
+			System.out.println("Ha elegido crear la reina negra. Empieza en 8d.");
+			}
+			
+	}
+	
+public static void mostrarMenuDirecciones() {
+	
+	System.out.println("Elija una dirección para moverse:");
+	System.out.println("1 - Norte. 2 - Noreste- 3 - Este.");
+	System.out.println("4 - Sureste. 5 - Sur. 6 - Suroeste.");
+	System.out.println("7 - Oeste. 8 - Noroeste.");
+	
+}
+
+
 }
