@@ -108,4 +108,19 @@ public class Consola {
 				return Direccion.NORTE;
 		}
 	}
+
+public static int elegirPasos() {
+	
+	int pasos;
+	
+	do {
+
+		System.out.println("Por favor, elija un número de pasos entre el 1 y el 7: ");
+		pasos = Entrada.entero();
+	} while (pasos < 1 || pasos > 7);
+	
+	return pasos;
+}
+
+
 }
