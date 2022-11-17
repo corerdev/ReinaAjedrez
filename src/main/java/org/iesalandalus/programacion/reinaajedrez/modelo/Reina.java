@@ -123,4 +123,11 @@ public class Reina {
 		}
 
 	}
+
+	@Override
+	public String toString() {
+		return "color=" + color + ", posicion=(" + posicion + ")";
+	}
+	
+	
 }
