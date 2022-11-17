@@ -122,5 +122,12 @@ public static int elegirPasos() {
 	return pasos;
 }
 
+public static void despedirse() {
+	
+	System.out.println("¡Hasta pronto!");
+	System.out.println("-");
+	System.out.println("Coré Ruiz Díaz para 1º de DAW, Programación");
+	
+}
 
 }
