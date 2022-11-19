@@ -129,5 +129,6 @@ public class Reina {
 		return "color=" + color + ", posicion=(" + posicion + ")";
 	}
 	
+
 	
 }
