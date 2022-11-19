@@ -5,7 +5,7 @@ import javax.naming.OperationNotSupportedException;
 public class Reina {
 
 	private Color color;
-	private Posicion posicion;
+	private static Posicion posicion;
 
 	public Color getColor() {
 		return color;
